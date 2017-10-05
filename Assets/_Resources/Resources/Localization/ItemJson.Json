@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 1,
+    "Name": "血瓶",
+    "Type": 0,
+    "Description": "回血的",
+    "MaxLimit": 5
+  },
+  {
+    "Id": 2,
+    "Name": "蓝瓶",
+    "Type": 1,
+    "Description": "回蓝的",
+    "MaxLimit": 5
+  }
+]
