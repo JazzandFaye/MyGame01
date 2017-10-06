@@ -4,22 +4,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerView : RoleBaseEventView
+public class PlayerView : FightingBaseView
 {
     [Inject]
     public MapModel map { get; set; }
 
     private bool moving;
 
-    protected override void Start()
+    [Inject]
+    public RoleModel role { get; set; }
+
+    [Inject]
+    public DataBaseCommon dataBase { get; set; }
+
+     
+
+    public virtual void Init(RoleModel Role)
     {
-        base.Start();
-        Init(role);
+        //初始化数据和一些组件
+        role = Role;
+        role.RoleDir = RoleModel.Direction.None;
+        
     }
 
     public void Update()
     {
-        GameUpdate();         
+        GameUpdate();
+        Debug.Log(DataBaseManager.Instance.FindRole(0).Atk);
     }
 
     public override void GameUpdate()
@@ -65,7 +76,7 @@ public class PlayerView : RoleBaseEventView
                 }
             }
 
-            Debug.Log(role.MoveSpeed);
+            Debug.Log(role);
             GetComponent<CharacterController>().SimpleMove(new Vector3(h * 5, 0, v * 5));
             //GetComponent<CharacterController>().SimpleMove(new Vector3(h * role.MoveSpeed, 0, v * role.MoveSpeed));
 

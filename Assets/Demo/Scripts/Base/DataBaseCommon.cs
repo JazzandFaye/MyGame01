@@ -13,6 +13,7 @@ public class DataBaseCommon {
     {
         Debug.Log("导入数据");
         PlayerConfigList = common.LoadConfig<PlayerConfig>();
+        
     }
 
     public T GetConfigByID<T>(int id, List<T> i) where T : BaseConfig

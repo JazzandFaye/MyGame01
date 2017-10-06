@@ -12,15 +12,26 @@ public class PlayerMediator : FightingBaseMediator {
     [Inject]
     public DataBaseCommon dataBase { get; set; }
     [Inject]
-    public FightingCommon common { get; set; }
+    public FightingCommon Common { get; set; }
     [Inject]
     public User user { get; set; }
 
+    [Inject]
+    public IUnitAPI common { get; set; }
 
     public override void OnRegister()
     {
-        UpdateListeners(true);
-        //playerView.dispatcher.AddListener(GameConfig.PlayerState.MOVE, playerView.MoveToDirection);
+        //var config = dataBase.GetConfigByID(user.PlayerId, dataBase.PlayerConfigList);
+        //config = common.LoadConfig<PlayerConfig>();
+        //Debug.Log(dataBase.GetConfigByID(user.PlayerId, dataBase.PlayerConfigList));
+        //foreach (var item in dataBase.PlayerConfigList)
+        //{
+        //    Debug.Log(item);
+        //}
+        //Debug.Log(user.PlayerId);
+        //playerView.Init(config);
+        //GetComponent<Rigidbody>().isKinematic = false;
+        UpdateListeners(true);        
     }
     public override void OnRemove()
     {
@@ -44,9 +55,10 @@ public class PlayerMediator : FightingBaseMediator {
     }
     protected override void InitData()
     {
-        Debug.Log("开始");
         var config = dataBase.GetConfigByID(user.PlayerId, dataBase.PlayerConfigList);
         playerView.Init(config);
+        Debug.Log(config.Atk);
+        Debug.Log("test");
         GetComponent<Rigidbody>().isKinematic = false;
     }
     protected override void OnGameRestart()

@@ -56,6 +56,7 @@
      <Compile Include="Assets\Demo\Scripts\Base\GameConfig.cs" />
      <Compile Include="Assets\Demo\Scripts\Base\IUnitAPI.cs" />
      <Compile Include="Assets\Demo\Scripts\Extensions\DictionaryExtension.cs" />
+     <Compile Include="Assets\Demo\Scripts\Manager\DataBaseManager.cs" />
      <Compile Include="Assets\Demo\Scripts\Manager\InventoryManager.cs" />
      <Compile Include="Assets\Demo\Scripts\Manager\UIPanelManager.cs" />
      <Compile Include="Assets\Demo\Scripts\MapGenerate\ControlNode.cs" />
