@@ -9,28 +9,8 @@ public class PlayerMediator : FightingBaseMediator {
     [Inject]
     public PlayerView playerView { get; set; }
 
-    [Inject]
-    public DataBaseCommon dataBase { get; set; }
-    [Inject]
-    public FightingCommon Common { get; set; }
-    [Inject]
-    public User user { get; set; }
-
-    [Inject]
-    public IUnitAPI common { get; set; }
-
     public override void OnRegister()
     {
-        //var config = dataBase.GetConfigByID(user.PlayerId, dataBase.PlayerConfigList);
-        //config = common.LoadConfig<PlayerConfig>();
-        //Debug.Log(dataBase.GetConfigByID(user.PlayerId, dataBase.PlayerConfigList));
-        //foreach (var item in dataBase.PlayerConfigList)
-        //{
-        //    Debug.Log(item);
-        //}
-        //Debug.Log(user.PlayerId);
-        //playerView.Init(config);
-        //GetComponent<Rigidbody>().isKinematic = false;
         UpdateListeners(true);        
     }
     public override void OnRemove()
@@ -53,18 +33,15 @@ public class PlayerMediator : FightingBaseMediator {
     {
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
     }
-    protected override void InitData()
-    {
-        var config = dataBase.GetConfigByID(user.PlayerId, dataBase.PlayerConfigList);
-        playerView.Init(config);
-        Debug.Log(config.Atk);
-        Debug.Log("test");
-        GetComponent<Rigidbody>().isKinematic = false;
-    }
-    protected override void OnGameRestart()
-    {
-        InitData();
-        GetComponent<Rigidbody>().isKinematic = false;
-        base.OnGameRestart();
-    }
+
+    //protected override void InitData()
+    //{   
+    //    GetComponent<Rigidbody>().isKinematic = false;
+    //}
+    //protected override void OnGameRestart()
+    //{
+    //    InitData();
+    //    GetComponent<Rigidbody>().isKinematic = false;
+    //    base.OnGameRestart();
+    //}
 }

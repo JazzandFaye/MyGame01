@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoleModel :BaseConfig{
+public class RoleModel {
 
     public int Hp { get; set; }//生命值
     public int Mp { get; set; }//法力值

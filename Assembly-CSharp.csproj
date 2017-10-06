@@ -44,17 +44,13 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>D:/unity/unity5.6/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>D:/unity/unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:/unity/unity5.6/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>D:/unity/unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Demo\Scripts\Base\CustomAPI.cs" />
-     <Compile Include="Assets\Demo\Scripts\Base\DataBaseCommon.cs" />
-     <Compile Include="Assets\Demo\Scripts\Base\GameConfig.cs" />
-     <Compile Include="Assets\Demo\Scripts\Base\IUnitAPI.cs" />
      <Compile Include="Assets\Demo\Scripts\Extensions\DictionaryExtension.cs" />
      <Compile Include="Assets\Demo\Scripts\Manager\DataBaseManager.cs" />
      <Compile Include="Assets\Demo\Scripts\Manager\InventoryManager.cs" />
@@ -72,34 +68,29 @@
      <Compile Include="Assets\Demo\Scripts\MVC\Command\CommandEvent.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Command\OperationCommand.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Command\StartCommand.cs" />
-     <Compile Include="Assets\Demo\Scripts\MVC\Command\TestCommand.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Demo_MVCSContext.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Demo_RootContextView.cs" />
-     <Compile Include="Assets\Demo\Scripts\MVC\Model\BaseConfig.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Model\BuffModel.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Model\CustomEventData\CustomEventData.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Model\CustomEventData\CustomOperationEventData.cs" />
-     <Compile Include="Assets\Demo\Scripts\MVC\Model\FightingCommon.cs" />
+     <Compile Include="Assets\Demo\Scripts\MVC\Model\GameConfig.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Model\ItemModel.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Model\MapModel.cs" />
-     <Compile Include="Assets\Demo\Scripts\MVC\Model\PlayerConfig.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Model\RoleModel.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Model\SkillModel.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Model\UIPanelInfo.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Model\UIPanelType.cs" />
-     <Compile Include="Assets\Demo\Scripts\MVC\Model\User.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\Model\WeaponModel.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\CamMediator.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\CamView.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\FightingBaseMediator.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\FightingBaseView.cs" />
+     <Compile Include="Assets\Demo\Scripts\MVC\View\MonsterMediator.cs" />
+     <Compile Include="Assets\Demo\Scripts\MVC\View\MonsterView.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\OperationMediator.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\OperationView.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\PlayerMediator.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\PlayerView.cs" />
-     <Compile Include="Assets\Demo\Scripts\MVC\View\RoleBaseEventView.cs" />
-     <Compile Include="Assets\Demo\Scripts\MVC\View\TestMediator.cs" />
-     <Compile Include="Assets\Demo\Scripts\MVC\View\TestView.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\UI\BasePanel.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\UI\ItemPanel.cs" />
      <Compile Include="Assets\Demo\Scripts\MVC\View\UI\MainMenuPanel.cs" />
@@ -1145,25 +1136,25 @@
      <None Include="Assets\PlayMaker\Versions\readme.txt" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/unity/unity5.6/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/unity/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/unity/unity5.6/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>D:/unity/unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>D:/unity/unity5.6/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>D:/unity/unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/unity/unity5.6/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>D:/unity/unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Timeline">
- <HintPath>D:/unity/unity5.6/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ <HintPath>D:/unity/unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>D:/unity/unity5.6/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>D:/unity/unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
- <HintPath>D:/unity/unity5.6/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ <HintPath>D:/unity/unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="LitJson">
  <HintPath>G:/Mywork/Unity/MyGame-master/Assets/LJR/Plugins/LitJson.dll</HintPath>

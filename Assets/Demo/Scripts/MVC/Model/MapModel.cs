@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapModel : BaseConfig
+public class MapModel
 {
     //public Direction MapNowDir { get; set; }//地图当前方向
     //public int ID { get; set; }//地图ID

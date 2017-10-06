@@ -7,11 +7,6 @@ public class OperationMediator : FightingBaseMediator {
     [Inject]
     public OperationView view { get; set; }
 
-    [Inject]
-    public DataBaseCommon dataBase { get; set; }
-    [Inject]
-    public User user { get; set; }
-
     //注册
     public override void OnRegister()
     {
@@ -28,12 +23,12 @@ public class OperationMediator : FightingBaseMediator {
         view.dispatcher.UpdateListener(enable, GameConfig.OperationEvent.CLICK_DOWN, OnOperation);
         view.dispatcher.UpdateListener(enable, GameConfig.OperationEvent.MOVE, Move);
         view.dispatcher.UpdateListener(enable, GameConfig.OperationEvent.STOP, Stop);
+        view.dispatcher.UpdateListener(enable, GameConfig.OperationEvent.BEATTACKED, BeAttack);
         base.UpdateListeners(enable);
     }
 
     protected override void InitData()
     {
-        var config = dataBase.GetConfigByID(user.PlayerId, dataBase.PlayerConfigList);
         base.InitData();
     }
 
@@ -57,5 +52,13 @@ public class OperationMediator : FightingBaseMediator {
         CustomEventData data = e as CustomEventData;
         e.type = GameConfig.CoreEvent.USER_INPUT;
         dispatcher.Dispatch(GameConfig.CoreEvent.USER_INPUT, data);
+    }
+
+    void BeAttack(IEvent e)
+    {
+        Debug.Log("监听到BEATTACKED事件，并发送USER_INPUT事件");
+        CustomEventData data = e as CustomEventData;
+        e.type = GameConfig.CoreEvent.USER_INPUT;
+        dispatcher.Dispatch(GameConfig.CoreEvent.USER_INPUT, data);       
     }
 }

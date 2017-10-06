@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DataBaseManager : MonoBehaviour {
+public class DataBaseManager {
     //做成单例模式
     private static DataBaseManager _instance;
     public static DataBaseManager Instance
@@ -12,14 +12,12 @@ public class DataBaseManager : MonoBehaviour {
         {
             if (_instance == null)
             {
-                //_instance = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
                 _instance = new DataBaseManager();
             }
             return _instance;
         }
 
     }
-
 
     //私有的构造方法
     private DataBaseManager()
@@ -38,7 +36,7 @@ public class DataBaseManager : MonoBehaviour {
     private void ParseItemJson()
     {
         //文本在Unity里面是TextAsset类型
-        TextAsset roleJsonText = Resources.Load<TextAsset>("Config/PlayerConfig");
+        TextAsset roleJsonText = Resources.Load<TextAsset>("Config/RoleConfig");
         if (roleJsonText != null)
         {
             string roleJsonString = roleJsonText.text;
